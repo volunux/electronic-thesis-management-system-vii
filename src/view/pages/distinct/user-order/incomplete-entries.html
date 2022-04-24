@@ -1,0 +1,81 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+	<div class ="entries-options">
+
+	{{> search-option}}
+
+	{{#whenAlg entries.length '>' 0}}
+
+	{{> pagination}}
+
+	{{/whenAlg}}
+
+	</div>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<table id ="entries" class ="entries">
+
+	<div class ="clear"></div>
+
+		<colgroup>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+		</colgroup>
+
+
+		<thead>
+			<tr>
+				<th class ="center">Index</th>
+				<th class ="left">Order Reference</th>
+				<th class ="center">Amount</th>
+				<th class ="center">Quantity</th>
+				<th class ="center">City</th>
+				<th class ="center">Created On</th>
+				<th class ="center">Status</th>
+				<th class ="center">Changes</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each entries}}
+
+			
+			<tr>
+				<td class="center">{{indexIncr @index}}</td>
+				<td title ="{{_id}}"><a href ="/{{urlResolver '../detail'}}/{{_id}}"> {{entryValid order_reference}}</a></td>
+				<td class ="center">{{entryValid amount}}</td>
+				<td class ="center">{{entryValid quantity}}</td>
+				<td class ="center">{{entryValid city}}</td>
+				<td class ="center">{{mDate created_on}} </td>
+				<td class ="center">{{entryValid status.name}}</td>
+				<td class ="tr-changes-menu center">
+					<a href ="/{{urlResolver '../requery-transaction'}}/{{order_reference}}" class ="btn-purple width120px"> <span class ="fa fa-eye"></span> Requery </a>
+				</td>
+			</tr>
+			
+
+			{{/each}}
+		</tbody>
+
+	</table>
+
+	{{/whenAlg}}
+
+		{{> no-entries}}
+
+	<div class ="entries-options">
+
+	{{> pagination}}
+
+	</div>
+
+		<div class ="clear"></div>

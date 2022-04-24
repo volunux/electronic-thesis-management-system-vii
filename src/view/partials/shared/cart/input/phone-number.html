@@ -1,0 +1,9 @@
+			<label for ="phone_number" class ="form-label"> Phone Number : * </label>
+
+			<input id ="phone_number" name ="phone_number" value ="{{entry.phone_number}}" class ="form-control" required="required"/>
+
+			{{#if errorObjectList.phone_number}}
+
+			<p class ="bold validation-error"> {{errorObjectList.phone_number.message}} </p>
+
+			{{/if}}

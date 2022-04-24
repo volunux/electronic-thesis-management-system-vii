@@ -1,0 +1,58 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail'>
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			<tr>
+
+				<th>Name </th>
+				<td> {{entryValid entry.file_name}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Last Modified Date </th>
+				<td> {{mDate entry.updated_on}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Status Last Modified Date </th>
+				<td> {{mDate entry.status_last_modified_date}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Size </th>
+				<td> {{entry.size}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Content </th>
+				<td> {{entry.content}} </td>
+
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

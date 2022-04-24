@@ -1,0 +1,24 @@
+
+.form-btn-upload-opt {
+
+	width : 80px;
+	float : none;
+}
+
+.form-file-upload {
+
+	width : 65% !important;
+}
+
+.none {
+
+	display : none;
+}
+
+.disabled {
+
+	color : white;
+	cursor : none;
+	background-color : black;
+	border : 2px solid darkgray;
+}

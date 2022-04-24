@@ -1,0 +1,78 @@
+<div id ='general-timeline'>
+
+	<h2> Timeline </h2>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<div>
+
+		<div class ='comments'>
+
+		{{#each entries}}
+
+				<div class ='comment'>
+
+					<p> <b class ='bold'> {{indexIncr @index}} </b> <small class ='timestamp'> {{mDate updated_on}} </small> </p>
+
+					{{#if author_name}}
+
+									<p class ='author'> <small> <b class ='bold'> {{author_name}}: </b> </small> {{#if text}} {{text}} {{/if}} </p>
+
+					{{/if}}
+
+					{{#unless author_name}}
+
+									<p class ='author'> <small> <b class ='bold'> Anonymous: </b> </small> {{#if text}} {{text}} {{/if}} </p>
+
+					{{/unless}}
+
+					<a class ='btn-blue reply-add' href="comment/{{_id}}/reply"> Reply </a>
+
+					{{#whenAlg replies.length '>' 0}}
+
+						<div class ='replies'>
+
+					{{#each replies}}
+
+								<div class ='reply'>
+
+									{{#if updated_on}}
+
+									<p> <b class ='bold'> {{indexIncr @index}} </b> <small class ='timestamp'> {{mDate updated_on}} </small> </p>
+
+								{{/if}}
+
+								{{#if author_name}}
+
+									<p class ='author'> <small> <b class ='bold'> {{author_name}}: </b> </small> {{#if text}} {{text}} {{/if}} </p>
+
+								{{/if}}
+
+								{{#unless author_name}}
+
+									<p class ='author'> <small> <b class ='bold'> Anonymous </b> </small> : {{#if text}} {{text}} {{/if}} </p>
+
+								{{/unless}}
+
+								</div>
+
+					{{/each}}
+
+						</div>
+
+					{{/whenAlg}}
+
+				</div>
+
+				{{/each}}
+
+		</div>
+
+	</div>
+
+	{{/whenAlg}}
+
+	{{> no-entries}}
+
+</div>
+

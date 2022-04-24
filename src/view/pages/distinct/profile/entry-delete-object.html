@@ -1,0 +1,11 @@
+<h2 class ="bold"> {{title}} {{objectType}} Delete </h2>
+
+<p>If the button is clicked or pressed, it will result in deletion of user {{objectType}} by the system. This means your profile will continue to use the default {{objectType}} if available or none. </p>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+					{{> csrf}}
+
+			<button class ='form-btn-submit btn-green' type ='submit' > Confirm </button>
+
+	</form>

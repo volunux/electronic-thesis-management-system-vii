@@ -1,0 +1,56 @@
+{{#if entry}}
+
+<div class ="entry-update">
+
+	<h2 class ="bold" > Entry Update : {{title}} </h2>
+
+	<form method ="POST" enctype ="multipart/form-data">
+
+		{{> csrf}}
+
+	{{> validation-errors}}
+
+	<fieldset class ="form-group form-file-upload">
+		<label for ="{{fieldName}}" class ="form-label"> {{label}} : * </label>
+		<div class ="clear"></div>
+		<input type ="file" accept ="{{accept}}" id ="{{fieldName}}" name ="{{fieldName}}" required ="required" class="form-control" />
+
+	<input type ="hidden" name ="file_size" value ="{{fileSize}}" required="required"/>
+	<input type ="hidden" name ="uploadUrl" value ="{{uploadUrl}}" required="required"/>
+	<input type ="hidden" name ="file_type" value ="{{fileType}}" required="required"/>
+	<input type ="hidden" name ="thesis_id" value ="{{entry._id}}" required="required"/>
+	<input type ="hidden" name ="thesis_slug" value ="{{entry.slug}}" required="required"/>
+
+	<br/>
+		<div class ="clear"></div>
+	{{#whenAlg file_upl "==" true}}
+	<button class ="btn-upload disabled form-btn btn-green form-btn-upload-opt" disabled ="disabled"> <span class ="fa fa-upload"></span> Upload </button>
+	{{/whenAlg}}
+	<button class ="btn-delete btn-file-upload-delete none form-btn btn-red form-btn-upload-opt" disabled="disabled"> <span class ="fa fa-delete"></span> Delete </button>
+	<button class ="btn-cancel btn-file-upload-cancel none form-btn btn-gray form-btn-upload-opt" disabled="disabled"> Cancel </button>
+
+	<p class ='file-text'> </p>
+
+</fieldset>
+
+<div class ="clear"></div>
+
+	{{#whenAlg file_upl "==" false}}
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Submit </button>
+
+		</div>
+
+	{{/whenAlg}}
+
+	</form>
+
+	<div class ="clear"></div>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

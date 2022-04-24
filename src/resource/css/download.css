@@ -1,0 +1,120 @@
+@import "./font.css";
+@import "./base.css";
+@import "./header-nav.css";
+@import "./btn.css";
+@import "./search.css";
+@import "./entries.css";
+@import "./commons.css";
+@import "./checkbox.css";
+@import "./item-detail.css";
+@import "./form.css";
+@import "./options.css";
+@import "./dashboard.css";
+@import url('./responsive/common-490px.css') screen and (max-width : 490px);
+@import url('./responsive/form-580px.css') screen and (min-width : 660px) and (max-width : 1040px);
+@import url('./responsive/form-580px.css') screen and (max-width : 580px);
+@import url('./responsive/nav-600px.css') screen and (max-width : 600px);
+@import url('./responsive/nav-680px.css') screen and (max-width : 680px);
+@import url('./responsive/nav-800px.css') screen and (max-width : 800px);
+@import url('./responsive/common-700px.css') screen and (max-width : 700px);
+@import url('./responsive/common-760px.css') screen and (max-width : 760px);
+
+
+col:nth-of-type(1) {
+
+	width : 4%;
+}
+
+col:nth-of-type(2) {
+
+	width : 28%;
+}
+
+col:nth-of-type(3) {
+
+	width : 14%;
+}
+
+col:nth-of-type(4) {
+
+	width : 9%;
+}
+
+col:nth-of-type(5) {
+
+	width : 10%;
+}
+
+col:nth-of-type(6) {
+
+	width : 10%;
+}
+
+col:nth-of-type(7) {
+
+	width : 30%;
+}
+
+table#entries tbody td a {
+   line-height: 0;
+}
+
+
+@media screen and (max-width : 700px) {
+
+	table#entries tbody td:nth-child(1)::before {
+
+		content : 'Entry Index : ';
+	}
+
+	table#entries tbody td:nth-child(2)::before {
+
+		content : 'Title : ';
+	}
+
+	table#entries tbody td:nth-child(3)::before {
+
+		content : 'Author : ';
+	}
+
+	table#entries tbody td:nth-child(4)::before {
+
+		content : 'Publication Year : ';
+	}
+
+	table#entries tbody td:nth-child(5)::before {
+
+		content : 'Number of Page : ';
+	}
+
+	table#entries tbody td:nth-child(7)::before {
+
+		content : 'Item options : ';
+	}
+
+	table#entries tbody td:nth-child(1) , td:nth-child(2) , td:nth-child(3) , td:nth-child(4) , td:nth-child(5) , td:nth-child(7) {
+
+		display : block;
+		text-align : left;
+	}
+
+	.tr-changes-menu {
+
+		display : block;
+	}
+
+	.tr-changes-menu a , .tr-changes-menu button {
+
+		display : inline-block;
+	}
+
+	table#entries td , table#entries td::before , table#entry-detail td , table#entry-detail th {
+
+		font-size : 13.5px;
+	}
+
+	#dashboard a {
+
+		font-size : 13px;
+	}
+}

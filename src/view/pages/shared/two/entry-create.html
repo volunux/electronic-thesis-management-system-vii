@@ -1,0 +1,24 @@
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > {{title}} </h2>
+
+	<form method ="POST">
+
+		{{> csrf}}
+
+	{{> validation-errors}}
+
+		<fieldset class ="form-group wide"> {{> shared/common/input/name }} </fieldset>
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-green" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>

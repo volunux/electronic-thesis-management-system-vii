@@ -1,0 +1,90 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail' class ="thesis-detail">
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			{{#if entry.title}}
+			<tr>
+
+				<th> Title </th>
+				<td> <b> {{entry.title}} </b>  </td>
+
+			</tr>
+
+			{{/if}}
+
+			{{#if entry.requester}}
+			<tr>
+
+				<th> Requester </th>
+				<td> {{entry.requester.first_name}} {{entry.requester.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.handler}}
+			<tr>
+
+				<th> Handler </th>
+				<td> {{entry.handler.first_name}} {{entry.handler.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			<tr>
+
+				<th> Message </th>
+				<td> {{entry.message}} </td>
+
+			</tr>
+
+
+			<tr>
+
+				<th> Response </th>
+				<td> {{entry.response}} </td>
+
+			</tr>
+
+
+			{{#if entry.status}}
+			<tr>
+				<th> Status </th>
+				<td> {{entry.status.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			<tr>
+				<th> Created On </th>
+				<td> {{mDate entry.created_on}} </td>
+			</tr>
+
+
+			<tr>
+				<th> Updated On </th>
+				<td> {{mDate entry.updated_on}} </td>
+			</tr>
+
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

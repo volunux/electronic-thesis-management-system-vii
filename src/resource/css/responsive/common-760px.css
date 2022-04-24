@@ -1,0 +1,23 @@
+
+#item-profile {
+
+	float : none;
+	width : 100%;
+	border : none;
+	border-bottom : 2px solid #75ced7;
+	margin : 0px 0px 20px 0px;
+	background: none;
+	background-color : white;
+	color : black;
+}
+
+#item-body {
+
+	margin-right : 0px;
+}
+
+.form-control-user-role {
+
+	width : 45%;
+	float : left;
+}

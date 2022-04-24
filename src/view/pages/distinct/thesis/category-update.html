@@ -1,0 +1,31 @@
+{{#if entry}}
+
+<h2 class ="bold"> Entry Update : {{title}} </h2>
+
+<div id ="dashboard">
+
+	<ul>
+
+		<li>
+				<a class ="center" href ="/internal/thesis/detail/update/{{entry.slug}}" title ="{{title}} Details Update"> <span class ="fa fa-pencil"></span> Details  </a>
+		</li>
+
+		<li>
+			<a class ="center" href ="/internal/thesis/content/update/{{entry.slug}}" title ="{{title}} Content or Abstract Update"> <span class ="fa fa-edit"></span> Content or Abstract </a>
+		</li>
+
+		<li>
+			<a class ="center" href ="/internal/thesis/cover-image/update/{{entry.slug}}" title ="{{title}} Cover Image Update"> <span class ="fa fa-image"></span> Cover Image </a>
+		</li>
+
+		<li>
+			<a class ="center" href ="/internal/thesis/document/update/{{entry.slug}}" title ="{{title}} Document Update"> <span class ="fa fa-file"></span> Document </a>
+		</li>
+
+	</ul>
+
+	</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

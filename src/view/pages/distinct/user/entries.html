@@ -1,0 +1,94 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+	<div class ="entries-options">
+
+	{{> search-option}}
+
+	{{> delete-option}}
+
+	{{#whenAlg entries.length '>' 0}}
+
+	{{> pagination}}
+
+	{{/whenAlg}}
+
+	</div>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<div class ="clear"></div>
+
+	<table id ="entries" class ="entries">
+
+		<colgroup>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th class ="center">Index</th>
+				<th class ="left">Full Name</th>
+				<th class ="left">Email Address</th>
+				<th class ="center">Department</th>
+				<th class ="center">Faculty</th>
+				<th class ="center">Level</th>
+				<th class ="center">Updated On</th>
+				<th class ="center">Status</th>
+				<th class ="center" >Changes</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each entries}}
+
+			
+			<tr>
+				<td class="center">{{indexIncr @index}}</td>
+				<td class ="left" title ="{{entryValid last_name}} {{entryValid first_name}}"><a href ="/{{urlResolver '../detail'}}/{{_id}}">{{entryValid last_name}} {{entryValid first_name}}</a> </td>
+				<td class ="left" title ="{{email_address}}">{{entryValid email_address}}</td>
+				<td class ="center" title ="{{department.name}}" >{{toAcronym department.name}}</td>
+				<td class ="center" title ="{{faculty.name}}" >{{toAcronym faculty.name}}</td>
+				<td class ="center" title ={{level.name}}>{{level.abbreviation}}</td>
+				<td class ="center">{{mDate updated_on}} </td>
+				<td class ="center">{{entryValid status.name}}</td>
+				<td class ="tr-changes-menu center">
+					<a href ="/{{urlResolver '../detail'}}/{{_id}}" class ="btn-navy"> <span class ="fa fa-eye"></span> Read</a>
+					<a href ="/{{urlResolver '../update'}}/{{_id}}" class ="btn-aqua"><span class ="fa fa-pencil"></span> Update</a>
+					<a href ="/{{urlResolver '../role/update'}}/{{_id}}" class ="btn-purple"><span class ="fa fa-pencil"></span> Role</a>
+					<a href ="/{{urlResolver '../delete'}}/{{_id}}" class ="btn-red"> <span class ="fa fa-trash"></span> Delete</a>
+				<label class="cust-checkbox-container">
+				  <input type="checkbox" value ='{{_id}}' name="entry_item" required="required">
+				  <span class="checkmark"></span>
+				</label>
+				</td>
+			</tr>
+			
+
+			{{/each}}
+		</tbody>
+
+	</table>
+
+{{/whenAlg}}
+
+		{{> no-entries}}
+
+	<div class ="entries-options">
+
+	{{> delete-option}}
+
+	{{> pagination}}
+
+	</div>
+
+	<div class ="clear"></div>

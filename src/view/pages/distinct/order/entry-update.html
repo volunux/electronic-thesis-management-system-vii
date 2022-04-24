@@ -1,0 +1,138 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail' class ="thesis-detail">
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			{{#if entry.order_reference}}
+			<tr>
+
+				<th> Reference </th>
+				<td> <b> {{entryValid entry.order_reference}} </b>  </td>
+
+			</tr>
+			{{/if}}
+
+			{{#if entry.user}}
+			<tr>
+
+				<th> Full Name </th>
+				<td> {{entryValid entry.user.first_name}} {{entryValid entry.user.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.city}}
+			<tr>
+
+				<th> City </th>
+				<td> {{entryValid entry.city}} </td>
+
+			</tr>
+			{{/if}}
+
+			{{#if entry.state}}
+			<tr>
+				<th> State </th>
+				<td>{{entryValid entry.state}}</td>
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.contact_address}}
+			<tr>
+
+				<th> Contact Address </th>
+				<td> {{entryValid entry.contact_address}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.phone_number}}
+			<tr>
+
+				<th> Phone Number </th>
+				<td> {{entry.phone_number}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.updated_on}}
+			<tr>
+				<th> Updated On </th>
+				<td> {{mDate entry.updated_on}} </td>
+			</tr>
+
+			{{/if}}
+
+			{{#if entry.status}}
+			<tr>
+				<th> Status </th>
+				<td> {{entry.status.name}} </td>
+			</tr>
+
+			{{/if}}
+
+
+		{{#whenAlg statuses.length ">" 0}}
+
+			<tr>
+
+				<th> Update Status : </th>
+				<td>
+
+			<form method ="POST" enctype="application/x-www-formurlencoded">
+
+			{{> csrf}}
+
+				{{> validation-errors}}
+
+				<fieldset class ="form-group wide" > 
+
+			<label for ="status" class ="form-label"> Status : * </label>
+
+			<select id ="status" name ="status" class ="form-control" required="required" {{#if toDelete}} readonly="readonly" {{/if}}>
+
+				<option value =""> </option>
+
+			{{#each statuses}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.status_id}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>
+
+				 </fieldset>
+
+		<button type ="submit" class ="form-btn-submit btn-blue" id ="update-status-btn"> Update </button>
+
+		</form>
+
+				 </td>
+
+			</tr>
+
+		{{/whenAlg}}
+
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

@@ -1,0 +1,186 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail' class ="thesis-detail">
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			{{#if entry.title}}
+			<tr>
+
+				<th> Title </th>
+				<td> <b> {{entry.title}} </b>  </td>
+
+			</tr>
+			{{/if}}
+
+			{{#whenAlg entry.cover_image.location '!==' null}}
+			<tr>
+
+				<th> Cover Image </th>
+				<td> <img class ="object-display" src ="{{entryCoverImage entry.cover_image.location}}"/> </td>
+
+			</tr>
+			{{/whenAlg}}
+
+			{{#if entry.document}}
+			<tr>
+
+				<th>Document </th>
+
+				<td>
+						{{> download-option}}
+						<form action="/{{urlResolver '../../../../save'}}/order/{{order_id}}/thesis/{{entry._id}}" hidden="true">
+							{{> csrf}}
+						</form>
+				</td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.price}}
+			<tr>
+
+				<th> Price </th>
+				<td> {{entry.price}} </td>
+
+			</tr>
+			{{/if}}
+
+
+
+			{{#if entry.content}}
+			<tr>
+
+				<th> Content </th>
+				<td id ="main-body-detail"> {{{entry.content}}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			<tr>
+				<th> Status </th>
+				<td>{{entryValid entry.status.name}}</td>
+			</tr>
+
+
+			{{#if entry.number_of_page}}
+			<tr>
+
+				<th> Number of Page </th>
+				<td> {{entry.number_of_page}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.grade}}
+			<tr>
+
+				<th> Grade </th>
+				<td> {{entry.grade.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.publisher}}
+			<tr>
+
+				<th> Publisher </th>
+				<td> {{entry.publisher.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.department}}
+			<tr>
+
+				<th> Department </th>
+				<td> {{entry.department.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.faculty}}
+			<tr>
+
+				<th> Faculty </th>
+				<td> {{entry.faculty.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.supervisor}}
+			<tr>
+
+				<th> Supervisor </th>
+				<td> {{entry.supervisor}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.publication_year}}
+			<tr>
+
+				<th> Publication Year </th>
+				<td> {{entry.publication_year}} </td>
+
+			</tr>
+			{{/if}}
+
+
+
+			<tr>
+				<th> Created On </th>
+				<td> {{mDate entry.created_on}} </td>
+			</tr>
+
+			<tr>
+				<th> Updated On </th>
+				<td> {{mDate entry.updated_on}} </td>
+			</tr>
+
+
+			{{#if entry.author_name}}
+			<tr>
+
+				<th> Author Name </th>
+				<td> {{entry.author_name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.user}}
+			<tr>
+
+				<th> Name of Uploader </th>
+				<td> {{entry.user.first_name}} {{entry.user.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

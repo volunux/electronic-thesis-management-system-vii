@@ -1,0 +1,26 @@
+
+			<fieldset><label for ="role" class ="form-label"> User Role : * </label></fieldset>
+
+			<div class ="form-control form-control-checkbox">
+
+			{{#each roles}}
+
+			<p class ="form-control-user-role">
+
+				<label class="cust-checkbox-container">	{{name}} 
+				  <input type="checkbox" value ='{{_id}}' name="role"
+
+				{{#each ../entry.role}}
+
+					{{#whenAlg this "==" ../_id}} checked ="checked" {{/whenAlg}}
+
+				{{/each}}/>
+
+				  <span class="checkmark"></span>
+				</label>
+
+			</p>
+
+			{{/each}}
+
+		</div>

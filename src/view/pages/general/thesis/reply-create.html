@@ -1,0 +1,25 @@
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > Add a Reply </h2>
+
+		<form action ="" method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+			<input type ="hidden" value="{{comment_id}}" name ="comment_id" required="required"/>
+
+	{{> validation-errors}}
+
+		<fieldset class ="form-group wide"> {{> shared/thesis/input/reply }} </fieldset>
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-green" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>

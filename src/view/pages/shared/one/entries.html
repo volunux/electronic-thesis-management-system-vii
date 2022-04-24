@@ -1,0 +1,73 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+	<div class ="entries-options">
+
+	{{> search-option}}
+
+	{{> delete-option}}
+
+	{{#whenAlg entries.length '>' 0}}
+
+	{{> pagination}}
+
+	{{/whenAlg}}
+
+	</div>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<table id ="entries" class ="entries">
+
+	<div class ="clear"></div>
+
+		<colgroup>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th class ="center">Index</th>
+				<th class ="left">Name</th>
+				<th class ="center">Abbreviation</th>
+				<th class ="center">Updated On</th>
+				<th class ="center">Changes</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each entries}}
+
+			
+			<tr>
+				<td class ="center">{{indexIncr @index}}</td>
+				<td title ="{{name}}"><a href ="/{{urlResolver '../detail'}}/{{_id}}">{{name}}</a></td>
+				<td class ="center">{{entryValid abbreviation}}</td>
+				<td class ="center">{{mDate updated_on}} </td>
+				{{> changes-menu}}
+			</tr>
+			
+
+			{{/each}}
+		</tbody>
+
+	</table>
+
+	{{/whenAlg}}
+
+		{{> no-entries}}
+
+	<div class ="entries-options">
+
+	{{> delete-option}}
+
+	{{> pagination}}
+
+	</div>
+
+		<div class ="clear"></div>

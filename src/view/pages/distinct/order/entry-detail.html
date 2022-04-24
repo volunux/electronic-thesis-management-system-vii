@@ -1,0 +1,173 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail'>
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			<tr>
+
+				<th colspan ="2" style="text-align:center !important">Basic Details </th>
+
+			</tr>
+
+			{{#if entry.user}}
+			<tr>
+
+				<th>Purchaser </th>
+				<td> {{entry.user.first_name}} {{entry.user.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+			<tr>
+
+				<th>Reference Number </th>
+				<td class ='bold'> {{entryValid entry.order_reference}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Amount </th>
+				<td class ='bold'> {{entryValid entry.amount}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Quantity </th>
+				<td class ='bold'> {{entryValid entry.quantity}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Created On </th>
+				<td> {{mDate entry.created_on}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Updated On </th>
+				<td> {{mDate entry.updated_on}} </td>
+
+			</tr>
+
+			{{#if entry.status}}
+			<tr>
+
+				<th> Status </th>
+				<td>{{entryValid entry.status.name}}</td>
+
+			</tr>
+
+			{{/if}}
+
+			<tr>
+
+				<th colspan="2" style="text-align:center !important">Address Details </th>
+
+			</tr>
+
+			<tr>
+
+				<th> State </th>
+				<td>{{entryValid entry.state}}</td>
+
+			</tr>
+
+			<tr>
+
+				<th> City </th>
+				<td>{{entryValid entry.city}}</td>
+
+			</tr>
+
+			<tr>
+
+				<th> Zip </th>
+				<td>{{entryValid entry.zip}}</td>
+
+			</tr>
+
+			{{#if entry.country}}
+			<tr>
+
+				<th> Country </th>
+				<td>{{entryValid entry.country.name}}</td>
+
+			</tr>
+			{{/if}}
+
+			<tr>
+
+				<th> Phone Number </th>
+				<td>{{entryValid entry.phone_number}}</td>
+
+			</tr>
+
+			<tr>
+
+				<th> Contact Address </th>
+				<td>{{entryValid entry.contact_address}}</td>
+
+			</tr>
+
+		
+			{{#whenAlg entry.items.length '>' 0}}
+
+			<tr>
+
+				<th colspan="2" style="text-align:center !important"> Items Details </th>
+
+			</tr>
+
+			<tr>
+
+				<th> Items </th>
+				<td>
+
+						<ul class ="order-items">
+
+						{{#each entry.items}}
+							
+							<li>
+								
+								<p class ="bold"> Item Id : {{entryValid item_id}} </p>
+								<p> Title : <a href ="/thesis/detail/{{item.slug}}"> 	{{#if item}} {{entryValid item.title}} {{/if}} </a> </p>
+								<p> Amount : {{entryValid amount}} (Price * Quantity) </p>
+								<p> Quantity : {{entryValid quantity}} </p>
+								<p > Price : {{entryValid unit_price}} </p>
+
+							</li>
+
+							<hr/>
+
+						{{/each}}
+
+						</ul>
+
+				</td>
+
+			</tr>
+
+			{{/whenAlg}}
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

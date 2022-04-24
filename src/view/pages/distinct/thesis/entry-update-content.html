@@ -1,0 +1,35 @@
+{{#if entry}}
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > Content Update : {{title}}  </h2>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+
+	{{> validation-errors}}
+
+			<div id ='thesis-editable-area-before'></div>
+
+		<fieldset class ="form-group wide">
+
+			<textarea id ="rich-editor" name ="content" > {{entry.content}} </textarea>
+
+		</fieldset>
+
+		<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

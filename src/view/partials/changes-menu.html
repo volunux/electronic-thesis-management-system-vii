@@ -1,0 +1,11 @@
+<td class ="tr-changes-menu center">
+	<a href ="/{{urlResolver '../detail'}}/{{_id}}" class ="btn-navy"> <span class ="fa fa-eye"></span> Read</a>
+	<a href ="/{{urlResolver '../update'}}/{{_id}}" class ="btn-aqua"><span class ="fa fa-pencil"></span> Update</a>
+	<a href ="/{{urlResolver '../delete'}}/{{_id}}" class ="btn-red"> <span class ="fa fa-trash"></span> Delete</a>
+
+<label class="cust-checkbox-container">
+  <input type="checkbox" value ='{{_id}}' name="entry_item" required="required">
+  <span class="checkmark"></span>
+  {{> csrf}}
+</label>
+</td>

@@ -1,0 +1,70 @@
+
+
+	{{> flash}}
+
+	<div class ="entries-options">
+
+	{{> search-option}}
+
+	{{#whenAlg entries.length '>' 0}}
+
+	{{> pagination}}
+
+	{{/whenAlg}}
+
+	</div>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<div class ="items">
+
+		{{#each entries}}
+
+			<div class ="item">
+
+				<h3 title ="{{title}}"> <a class ="" href ="/thesis/detail/{{slug}}"> <span class ="fa fa-link"></span> {{title}} </a> </h3>
+
+				<div class ="item-bio">
+
+				<p class="item-sub-item"> <b class ="bold"> Department : </b> {{department.name}} </p>
+				<p> <b class ="bold"> Publication Year : </b> {{publication_year}} </p>
+				<p  class="item-sub-item"> <b class ="bold"> Author : </b> {{author_name}} </p>
+				<p> <b class ="bold"> Price : </b> {{price}} </p>
+
+			</div>
+
+				<p> 
+
+					<form action ="/cart" method ="POST" enctype ="application/x-www-form-urlencoded">
+
+						{{> csrf}}
+						<input type ="hidden" value ="{{_id}}" name ="item_id" required="required"/>
+						<input type ="hidden" value ="{{title}}" name ="title" required="required"/>
+						<input type ="hidden" value ="1" name ="quantity" required="required"/>
+						<input type ="hidden" value ="{{price}}" name ="unit_price" required="required"/>
+						<div class ="item-menu">
+
+					 {{{addToCartButton _id}}}
+
+					</div>
+					</form>
+				
+			</p>
+
+			</div>
+
+		{{/each}}
+
+		</div>
+
+		{{/whenAlg}}
+
+		{{> no-entries}}
+
+	<div class ="entries-options">
+
+	{{> pagination}}
+
+	</div>
+
+	

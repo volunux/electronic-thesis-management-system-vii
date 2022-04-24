@@ -1,0 +1,120 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail' class ="thesis-detail">
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			{{#if entry.thesis}}
+			<tr>
+
+				<th> Title </th>
+				<td> <b> {{entry.thesis.title}} </b>  </td>
+
+			</tr>
+
+			{{/if}}
+
+			{{#if entry.requester}}
+			<tr>
+
+				<th> Requester </th>
+				<td> {{entry.requester.first_name}} {{entry.requester.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+			{{#if entry.handler}}
+			<tr>
+
+				<th> Handler </th>
+				<td> {{entry.handler.first_name}} {{entry.handler.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			<tr>
+
+				<th> Message </th>
+				<td> {{entry.message}} </td>
+
+			</tr>
+
+
+			<tr>
+
+				<th> Current Response </th>
+				<td> {{entry.response}} </td>
+
+			</tr>
+
+			{{#if entry.status}}
+			<tr>
+				<th> Status </th>
+				<td> {{entry.status.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			<tr>
+				<th> Created On </th>
+				<td> {{mDate entry.created_on}} </td>
+			</tr>
+
+
+			<tr>
+				<th> Updated On </th>
+				<td> {{mDate entry.updated_on}} </td>
+			</tr>
+
+
+			<tr>
+
+				<th> Update : </th>
+				<td>
+
+			<form method ="POST" enctype="application/x-www-formurlencoded">
+
+					{{> csrf}}
+
+				{{> validation-errors}}
+
+				<input type ="hidden" name ="_id" value="{{entry._id}}" required="required"/>
+				<input type ="hidden" name ="email_address" value="{{entry.requester.email_address}}" required="required"/>
+				<input type ="hidden" name ="full_name" value="{{entry.requester.first_name}} {{entry.requester.last_name}}" required="required"/>
+
+					{{#whenAlg statuses.length ">" 0}} <fieldset class ="form-group wide" > {{> shared/common/input/statuses}} </fieldset> {{/whenAlg}}
+
+				<fieldset class="form-group-wide">	<label for ="response" class ="form-label"> Response : </label>
+
+				<textarea id ="response" name ="response" class ="form-control form-control-textarea" required="required" > {{entry.response}} </textarea>
+
+				</fieldset>
+
+		<button type ="submit" class ="form-btn-submit btn-blue" id ="update-status-btn"> Update </button>
+
+		</form>
+
+				 </td>
+
+			</tr>
+
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

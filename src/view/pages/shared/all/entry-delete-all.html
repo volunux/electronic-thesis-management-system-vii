@@ -1,0 +1,19 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{#whenAlg entries.length '>' 0}}
+
+<p>All entries if the button is pressed will result in total deletion from the system or registry. It is advised you review your decision before proceeding as the action will remove all entry from the system.</p>
+
+<form method ='POST'>
+
+			{{> csrf}}
+
+			<button type ="submit" class ="form-btn-submit btn-red" > Submit </button>
+
+	</form>
+
+	<div class ="clear"></div>
+
+	{{/whenAlg}}
+
+	{{> no-entries}}

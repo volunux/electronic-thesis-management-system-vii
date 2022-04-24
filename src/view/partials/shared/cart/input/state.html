@@ -1,0 +1,9 @@
+			<label for ="state" class ="form-label"> State : * </label>
+
+			<input id ="state" name ="state" value ="{{entry.state}}" class ="form-control" required="required"/>
+
+			{{#if errorObjectList.state}}
+
+			<p class ="bold validation-error"> {{errorObjectList.state.message}} </p>
+
+			{{/if}}

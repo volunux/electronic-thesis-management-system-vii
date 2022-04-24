@@ -1,0 +1,19 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+<div id ="dashboard">
+
+	<ul>
+
+		<li>
+				<a class ="center" href ="/{{urlResolver './entries'}}" title ="{{title}} Entries"> <span class ="fa fa-list"></span> {{title}} Entries </a>
+		</li>
+
+		<li>
+				<a class ="center" href ="/{{urlResolver './delete/entries/all'}}" title ="Delete All {{title}} Entries"><span class ="fa fa-trash"></span> Delete All {{title}} Entries </a>
+		</li>
+
+	</ul>
+
+	</div>

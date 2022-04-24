@@ -1,0 +1,237 @@
+* {
+
+	box-sizing : border-box;
+	font-family : 'Arial';
+	padding : 0;
+	margin : 0;
+	border : 0;
+	text-decoration : none;
+	outline : none;
+	background : none;
+	box-shadow : none;
+	word-break : break-word;
+	border-collapse : collapse;
+}
+
+li , p , td , input , label , textarea , button {
+
+	font-family : 'RobotoRegular';
+}
+
+td , th , input , label , p {
+
+	font-size : 13px;
+}
+
+p {
+
+	line-height : 2.0em;
+}
+
+caption , h1 , h2 , h3 {
+
+	font-size : 20px;
+	font-family : 'Arial';
+	text-align : left;
+	font-weight : normal;
+	color : #1d73c5;
+	margin-bottom : 20px;
+}
+
+h2 {
+
+	font-size : 18px;
+}
+
+h3 {
+
+	font-size : 18px;
+}
+
+table {
+
+	margin-bottom : 30px;
+}
+
+b , .bold {
+
+	font-family: 'RobotoBold';
+}
+
+hr {
+
+	border : 1px solid lightblue;
+}
+
+img {
+
+	max-width : 100%;
+}
+
+.hidden {
+
+	visibility: hidden;
+}
+
+.passport {
+
+	width : 110px;
+	height : 110px;
+	max-width : 100%;
+}
+
+.signature {
+
+	width : 80px;
+	height : 80px;
+	max-width: 100%;
+}
+
+#container {
+
+	width : 97%;
+	margin : 10px auto;
+	padding : 1.2919896640826873385012919896641%;
+	/*position : relative;*/
+}
+
+#main {
+
+	margin-top : 15px;
+	padding : 1%;
+}
+
+.items {
+
+	overflow : hidden;
+}
+
+.item {
+
+	font-size : 13px;
+	width : 30%;
+	height : 250px;
+	padding : 1%;
+	margin : 0px 30px 10px 0px;
+	float : left;
+}
+
+.item h3 , .item h3 a {
+
+	color : #1d73c5;
+}
+
+.item h3 {
+
+	font-weight : bold;
+	font-size : 13.5px;
+	font-family : 'Arial';
+	height : 50px;
+	overflow : hidden;
+	line-height : 2.0em;
+	margin-bottom : 10px;
+}
+
+.item h3 a:hover {
+
+	color : #3099fd;
+}
+
+.item p {
+
+	line-height : 2.5em;
+}
+
+.item .item-menu , #item-profile .item-menu {
+
+	text-align : right;
+}
+
+.item-bio {
+
+	height : 120px;
+}
+
+.items .item .item-bio .item-sub-item {
+
+	text-overflow: ellipsis;
+	height : 30px;
+	white-space: nowrap;
+	overflow : hidden;
+}
+
+
+.flash-message-success {
+		color: green;
+    /* font-weight: bold; */
+    border-left: 2px;
+    /* border-bottom: 2px solid green; */
+    background-color: #14b0cf;
+    color: white;
+    padding: 4px;
+    margin-left : 10px;
+    margin-bottom : 10px;
+    width : 80%;
+    font-family: 'Arial';
+    font-size: 13px;
+    border: 2px solid #6edde7;
+ }
+
+ .object-display {
+
+	max-width : 100%;
+	height : auto;
+}
+
+.form-control-user-role {
+
+	width : 30%;
+	float : left;
+	margin-left : 10px;
+}
+
+#thesis-submission {
+
+	margin-top : 20px;
+}
+
+.thesis-detail tr td#main-body-detail * {
+
+	margin-left : 10px;
+	line-height : 2.5em;
+	font-family : 'RobotoRegular';
+}
+
+.thesis-detail tr td#main-body-detail strong {
+
+	font-family : 'RobotoBold';
+}
+
+#thesis-editable-area-before {
+
+	margin-bottom : 20px;
+}
+
+.validation-error {
+
+	font-weight : normal !important;
+	color : red;
+	font-size : 11px;
+	font-family: 'RobotoRegular';
+}
+
+.inline-children * {
+
+	display : inline-block;
+}
+
+.width120px {
+
+	width : 120px !important;
+}
+
+.discussion-box {
+
+	height : 300px;
+	resize : none;
+}

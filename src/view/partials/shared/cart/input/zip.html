@@ -1,0 +1,9 @@
+			<label for ="zip" class ="form-label"> Postal Code : * </label>
+
+			<input id ="zip" name ="zip" value ="{{entry.zip}}" class ="form-control" required="required"/>
+
+			{{#if errorObjectList.zip}}
+
+			<p class ="bold validation-error"> {{errorObjectList.zip.message}} </p>
+
+			{{/if}}

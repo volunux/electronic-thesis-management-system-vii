@@ -1,0 +1,181 @@
+table#entries:before {
+
+	content : "";
+	clear : both;
+	float : none;
+}
+
+table#entries {
+
+	width : 1270px;
+	table-layout: fixed;
+	padding : 5px;
+	margin-top : 20px;
+}
+
+table#entries th , table#entries td {
+
+	padding : 8px;
+	vertical-align : middle;
+	line-height : 1.25em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow : hidden;
+}
+
+th {
+
+	font-family : 'RobotoBold';
+	font-weight : bold;
+}
+
+table#entries tr td a {
+
+	font-family : 'RobotoRegular';
+}
+
+table#entries tr:hover {
+
+	background-color: #f9f9f9;
+}
+
+.tr-changes-menu a , .tr-changes-menu button , .item-download {
+
+	font-family : 'RobotoRegular';
+	display : inline-block;
+	width : 80px;
+	margin : 0% 1.3351134846461949265687583444593% 0% 0%;
+	text-align : center;
+	padding : 5px;
+	font-size : 11px;
+	border-radius : 8px;
+	cursor : pointer;
+	color : white;
+}
+
+#table-curves {
+
+	border : 3px solid #1d73c5;
+	display : block;
+	border-radius : 8px;
+}
+
+table#entry-detail {
+
+	width : 100%;
+	margin-bottom : 0;
+}
+
+table#entry-detail caption {
+
+	padding : 10px;
+}
+
+table#entry-detail th , table#entry-detail td {
+
+	border : 2px solid #e1d9d9;
+	padding : 8px;
+	vertical-align : middle;
+	font-size : 13px;
+	line-height : 2.5em;
+}
+
+table#entry-detail tr:first-child th , table#entry-detail tr:first-child td {
+
+	border-top : 0;
+}
+
+table#entry-detail tr:last-child th , table#entry-detail tr:last-child td {
+
+	border-bottom: 0;
+} 
+
+table#entry-detail col:nth-of-type(1) {
+
+	width : 25%;
+}
+
+table#entry-detail col:nth-of-type(2) {
+
+	width : 75%;
+}
+
+table#entry-detail th {
+
+	vertical-align : middle;
+	text-align : left;
+	border-left : 0;
+}
+
+table#entry-detail td {
+
+	border-right : 0;
+}
+
+table#entry-detail .main-content {
+
+	margin : 0px 30px 30px 0px;
+}
+
+table#entry-detail .main-content {
+
+	line-height : 2.0em !important;
+	font-family : 'RobotoRegular';
+	font-size : 13.3px;
+}
+
+table#entry-detail .main-content h1 {
+
+	margin-bottom : 20px;
+	line-height : 2.0em;
+}
+
+table#entry-detail .main-content ul {
+
+	margin : 20px 0px 20px 35px;
+	line-height : 2.5em;
+}
+
+table#entry-detail .main-content h2 , table#entry-detail .main-content h3 , table#entry-detail .main-content h4 , table#entry-detail .main-content h5 , table#entry-detail .main-content h6 {
+
+	margin-top : 20px;
+	margin-bottom : 20px;
+	font-family : 'Arial';
+}
+
+table#entry-detail .main-content h1 {
+
+	font-size : 22px;
+	font-family : 'Comic sans ms';
+	font-weight : bold;
+} 
+
+table#entry-detail .main-content h2 {
+
+	font-size : 20px;
+	font-weight : normal;
+} 
+
+table#entry-detail .main-content h3 {
+
+	font-size : 18px;
+	font-weight : normal;
+} 
+
+table#entry-detail .main-content h4 {
+
+	font-size : 16px;
+	font-weight : bold;
+} 
+
+table#entry-detail .main-content h5 {
+
+	font-size : 14px;
+	font-weight : bold;
+} 
+
+table#entry-detail .main-content h6 {
+
+	font-size : 12px;
+	font-weight : bold;
+}

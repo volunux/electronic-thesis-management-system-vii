@@ -1,0 +1,121 @@
+#item-detail {
+
+	padding : 10px;
+	overflow : hidden;
+	line-height
+}
+
+#item-profile {
+
+	line-height : 2.0em;
+	font-size : 13px;
+	padding : 10px;
+	float : right;
+	width : 350px;
+	border : 2px solid #75ced7;
+	margin-left : 30px;
+	margin-bottom : 20px;
+	background: linear-gradient(12deg, #1883b7, #8686e3);
+	background-color : #1883b7;
+	color : white;
+	border-radius : 8px;
+}
+
+#item-profile .item-menu .add-to-cart {
+
+	float : right;
+}
+
+#item-profile a {
+
+	line-height : 1.0em;
+}
+
+#item-profile p {
+
+	line-height : 2.5em;
+}
+
+#item-profile h6 {
+
+	font-size : 18px !important;
+	font-weight : normal !important;
+	margin : 10px 0px 0px 0px !important;
+}
+
+#item-body {
+
+	margin : 0px 30px 30px 0px;
+}
+
+#item-body {
+
+	line-height : 2.0em !important;
+	font-family : 'RobotoRegular';
+	font-size : 13.3px;
+}
+
+#item-body h2 {
+
+	line-height : 2.0em;
+}
+
+#item-body p {
+
+	line-height : 2.7em !important;
+}
+
+#item-body ul , #item-body ol {
+
+	margin : 20px 0px 20px 35px;
+	line-height : 2.5em;
+}
+
+#item-body h2 , #item-body h3 , #item-body h4 , #item-body h5 , #item-body h6 {
+
+	margin-top : 20px;
+	margin-bottom : 20px;
+	font-family : 'Arial';
+}
+
+#item-body h1 {
+
+	font-size : 22px;
+	font-family : 'Comic sans ms';
+	font-weight : bold;
+} 
+
+#item-body h2 {
+
+	font-size : 20px;
+	font-weight : normal;
+} 
+
+#item-body h3 {
+
+	font-size : 18px;
+	font-weight : normal;
+} 
+
+#item-body h4 {
+
+	font-size : 16px;
+	font-weight : bold;
+} 
+
+#item-body h5 {
+
+	font-size : 14px;
+	font-weight : bold;
+} 
+
+#item-body h6 {
+
+	font-size : 12px;
+	font-weight : bold;
+}
+
+#item-body #main-content strong {
+
+	font-family: 'RobotoBold';
+}

@@ -1,0 +1,20 @@
+
+			<label for ="payment_method" class ="form-label"> Payment Method : * </label>
+
+			<select id ="payment_method" name ="payment_method" class ="form-control" required="required" >
+
+				<option value =""> </option>
+
+			{{#each paymentMethods}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.payment_method}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>
+
+			{{#if errorObjectList.payment_method}}
+
+			<p class ="bold validation-error"> {{errorObjectList.payment_method.message}} </p>
+
+			{{/if}}

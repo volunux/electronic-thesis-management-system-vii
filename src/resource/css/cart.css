@@ -1,0 +1,185 @@
+@import "./font.css";
+@import "./base.css";
+@import "./header-nav.css";
+@import "./btn.css";
+@import "./search.css";
+@import "./entries.css";
+@import "./commons.css";
+@import "./checkbox.css";
+@import "./item-detail.css";
+@import "./form.css";
+@import "./options.css";
+@import "./dashboard.css";
+@import url('./responsive/common-490px.css') screen and (max-width : 490px);
+@import url('./responsive/form-580px.css') screen and (min-width : 660px) and (max-width : 1040px);
+@import url('./responsive/form-580px.css') screen and (max-width : 580px);
+@import url('./responsive/nav-600px.css') screen and (max-width : 600px);
+@import url('./responsive/nav-680px.css') screen and (max-width : 680px);
+@import url('./responsive/nav-800px.css') screen and (max-width : 800px);
+@import url('./responsive/common-700px.css') screen and (max-width : 700px);
+@import url('./responsive/common-760px.css') screen and (max-width : 760px);
+
+
+col:nth-of-type(1) {
+
+	width : 5%;
+}
+
+col:nth-of-type(2) {
+
+	width : 30%;
+}
+
+col:nth-of-type(3) {
+
+	width : 8%;
+}
+
+col:nth-of-type(4) {
+
+	width : 8%;
+}
+
+col:nth-of-type(5) {
+
+	width : 8%;
+}
+
+col:nth-of-type(6) {
+
+	width : 10%;
+}
+
+col:nth-of-type(7) {
+
+	width : 25%;
+}
+
+hr.line-separator {
+
+	width : 100%;
+	border : 1px solid #1d73c5;
+}
+
+.cart-update a , .cart-update button {
+
+	font-family : 'RobotoRegular';
+	display : inline-block;
+	width : 80px;
+	margin : 0% 1.3351134846461949265687583444593% 0% 0%;
+	text-align : center;
+	padding : 5px;
+	font-size : 11px;
+	border-radius : 8px;
+	cursor : pointer;
+	color : white;
+}
+
+.cart-item-quantity {
+
+	width : 60px;
+	border : 2px solid #9d9de3;
+	height : 30px;
+}
+
+.checkout-btn {
+
+	height : 35px;
+	padding : 4px;
+}
+
+table#entries tbody td a {
+
+	line-height : 0;
+}
+
+#checkout-summary h3 {
+
+	font-size : 18px;
+	font-family : 'Arial';
+	text-align : left;
+	font-weight : normal;
+	color : #1d73c5;
+	margin-bottom : 20px;
+}
+
+
+#checkout-summary {
+
+	line-height : 2.0em;
+	font-size : 13px;
+	padding : 10px;
+	float : right;
+	width : 100%;
+	margin-bottom : 20px;
+	border-radius : 8px;
+}
+
+@media screen and (max-width : 700px) {
+
+	table#entries td {
+
+		font-size : 13.5px;
+	}
+
+	table#entries tbody td:nth-child(3)::before {
+
+		content : 'Title : ';
+	}
+
+	table#entries tbody td:nth-child(4)::before {
+
+		content : 'Product Id : ';
+	}
+
+	table#entries tbody td:nth-child(6)::before {
+
+		content : 'Quantity : ';
+	}
+
+	table#entries tbody td:nth-child(7)::before {
+
+		content : 'Unit Price : ';
+	}
+
+	table#entries tbody td:nth-child(8)::before {
+
+		content : 'Amount : ';
+	}
+
+	table#entries tbody td:nth-child(9)::before {
+
+		content : 'Options : ';
+	}
+
+	table#entries tbody td:nth-child(3) , table#entries tbody td:nth-child(4) , table#entries tbody td:nth-child(6) , table#entries tbody td:nth-child(7) , table#entries tbody td:nth-child(8) , 
+
+	table#entries tbody td:nth-child(9) {
+
+		display : block;
+		text-align : left;
+	}
+
+	.cart-update a , .cart-update button {
+
+  	display: inline-block;
+	}
+
+	table#entries tfoot td:nth-child(2) , table#entries tfoot td:nth-child(3) , table#entries tfoot td:nth-child(4) , table#entries tfoot td:nth-child(5) {
+
+		display : block;
+		text-align : left;
+	}
+
+	table#entries tfoot {
+
+		display : block;
+	}
+
+	#dashboard a {
+
+		font-size : 13px;
+	}
+
+}
+

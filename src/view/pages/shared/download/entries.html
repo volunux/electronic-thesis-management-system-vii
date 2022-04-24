@@ -1,0 +1,63 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<table id ="entries" class ="entries">
+
+	<div class ="clear"></div>
+
+		<colgroup>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th class ="center">Index</th>
+				<th class ="left">Title</th>
+				<th class ="center">Author</th>
+				<th class ="center">Pub. Year</th>
+				<th class ="center">No. of Page</th>
+				<th class ="center">Price</th>
+				<th class ="center">Changes</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each entries}}
+
+			
+			<tr>
+				<td class ="center">{{indexIncr @index}}</td>
+				<td title ="{{item.title}}"><a href ="/{{urlResolver '../thesis/detail'}}/{{item.slug}}">{{item.title}}</a></td>
+				<td class ="center">{{item.author_name}} </td>
+				<td class ="center">{{item.publication_year}} </td>
+				<td class ="center">{{item.number_of_page}} </td>
+				<td class ="center">{{item.price}} </td>
+					<td class ="tr-changes-menu center">
+						<a href ="/{{urlResolver '../thesis/detail'}}/{{item.slug}}/{{order_id}}" class ="btn-navy"> <span class ="fa fa-eye"></span> Read</a>
+						{{> download-option}}
+						<form action="/{{urlResolver '../save'}}/order/{{order_id}}/thesis/{{item._id}}" hidden="true">
+							{{> csrf}}
+						</form>
+					</td>
+			</tr>
+			
+
+			{{/each}}
+		</tbody>
+
+	</table>
+
+	{{/whenAlg}}
+
+		{{> no-entries}}
+
+		<div class ="clear"></div>

@@ -1,0 +1,65 @@
+{{#if entry}}
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > {{title}} Entry Update </h2>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+
+	{{> validation-errors}}
+
+	<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/user/input/first-name }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/user/input/last-name }} </fieldset>
+
+		</div>
+
+
+		<fieldset class ="form-group wide"> {{> shared/user/input/about }} </fieldset>
+
+
+		<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/user/input/matriculation-number }} </fieldset>
+
+		{{#whenAlg countries.length ">" 0}} <fieldset class ="form-group"> {{> shared/user/input/countries }} </fieldset> {{/whenAlg}}
+
+	</div>
+
+			<div class ="form-group-parent"> 
+
+	{{#whenAlg faculties.length ">" 0}} <fieldset class ="form-group"> {{> shared/common/input/faculties }} </fieldset> {{/whenAlg}}
+
+	 <fieldset class ="form-group"> {{> shared/common/input/departments }} </fieldset>
+
+		</div>
+
+		
+		<div class ="form-group-parent">
+
+		{{#whenAlg levels.length ">" 0}} <fieldset class ="form-group"> {{> shared/user/input/levels }} </fieldset> {{/whenAlg}}
+
+		{{#whenAlg statuses.length ">" 0}} <fieldset class ="form-group"> {{> shared/user/input/user-statuses }} </fieldset> {{/whenAlg}}
+
+	</div>
+
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

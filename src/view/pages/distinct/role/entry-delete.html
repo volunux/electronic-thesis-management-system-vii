@@ -1,0 +1,31 @@
+{{#if entry}}
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > {{title}} </h2>
+
+	<form method ="POST">
+
+		{{> csrf}}
+
+	{{> validation-errors}}
+
+			<fieldset class ="form-group wide"> {{> shared/common/input/name }} </fieldset>
+
+			<fieldset class ="form-group wide"> {{> shared/common/input/word }} </fieldset>
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-red" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

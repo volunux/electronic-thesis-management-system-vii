@@ -1,0 +1,29 @@
+	<div id ="entry-update">
+
+	<h2 class ="bold" > Sign In </h2>
+
+	<p > Default sign in - Use <span class ="bold">davidjohn@gmail.com</span> as the email address and <span class ="bold">1234567890</span> as the password </p>
+
+	<form method ="POST" action ="/sign-in">
+
+		{{> csrf}}
+
+	{{> validation-errors}}
+
+		<fieldset class ="form-group wide"> {{> shared/user/input/email-address }} </fieldset>
+
+		<fieldset class ="form-group wide"> {{> shared/user/input/password }} </fieldset>
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Submit </button>
+
+		</div>
+
+	</form>
+
+	<p class ="center"><a class ="center bold btn-purple forgot-password-btn" href ="/forgot-password" title ="Forgot Password"> <span class ="fa fa-key"></span> Forgot your password? </a>
+
+</div>

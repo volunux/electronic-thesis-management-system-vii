@@ -1,0 +1,52 @@
+.next , .prev {
+
+	width : 80px;
+	display : inline-block;
+	font-size : 11px;
+	font-family : 'RobotoRegular';
+	margin-right : 10px;
+} 
+
+.pagination {
+
+	text-align : right;
+}
+
+.changes-option {
+
+	background-color : #2c815e;
+	color : #827f7f;
+	border-radius : 6px;
+	text-align : center;
+	padding : 8px;
+	border : 2px solid #6fed6f;
+	color : white;
+}
+
+.changes-option:hover {
+
+	background-color : #3dc98f;
+}
+
+.pagination {
+
+	text-align : right;
+}
+
+.delete-menu {
+
+	overflow : hidden;
+	float : left;
+}
+
+.delete-menu button {
+
+	width : 80px;
+	cursor : pointer;
+}
+
+.delete-menu button , .delete-menu span {
+
+	font-size : 11px;
+	font-family : 'RobotoRegular';
+}

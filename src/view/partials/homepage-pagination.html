@@ -1,0 +1,25 @@
+	<div class ='pagination'>
+
+	{{#whenAlg prevPageNumber '>' 0}}
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<a class ='changes-option prev' href="/{{urlResolver './'}}?updated_max={{lastEntry}}&page={{prevPageNumber}}"> <span class ="fa fa-angle-double-left"></span> Previous</a>
+
+	{{/whenAlg}}
+
+	{{#whenAlg entries.length '==' 0}}
+
+	<p class ="center"> <a class ='changes-option prev' href ="/{{urlResolver './'}}"> <span class ="fa fa-home"></span> Home </a> </p>
+
+	{{/whenAlg}}
+
+	{{/whenAlg}}
+
+	{{#whenAlg totalCount '==' 9}}
+
+	<a class ='changes-option next' href ="/{{urlResolver './'}}?updated_max={{lastEntry}}&page={{nextPageNumber}}"> Next <span class ="fa fa-angle-double-right"></span> </a>
+
+	{{/whenAlg}}
+
+	</div>

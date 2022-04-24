@@ -1,0 +1,53 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail'>
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			<tr>
+
+				<th>Name </th>
+				<td> {{entryValid entry.name}} </td>
+
+			</tr>
+
+			{{#if entry.user}}
+			<tr>
+
+				<th> User </th>
+				<td> {{entry.user.first_name}} {{entry.user.last_name}} </td>
+
+			</tr>
+			{{/if}}
+
+			<tr>
+
+				<th> Description </th>
+				<td> {{entryValid entry.description}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Updated On </th>
+				<td> {{mDate entry.updated_on}} </td>
+
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

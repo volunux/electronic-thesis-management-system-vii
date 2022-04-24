@@ -1,0 +1,113 @@
+{{#if entry}}
+
+	<div id ="item-detail">
+
+	<div id ="item-body">
+
+		<h2 class =""> {{entry.title}} </h2>
+
+	<div id ="item-profile">
+
+		<h6> Profile : </h6>
+
+		<p> <b class ="bold"> Department : </b> {{entry.department.name}} </p>
+		<p> <b class ="bold"> Publication Year : </b> {{entry.publication_year}} </p>
+		<p> <b class ="bold"> Author : </b> {{entry.author_name}} </p>
+		<p> <b class ="bold"> Price : </b> {{entry.price}} </p>
+		<p> <b class ="bold"> Number of Page : </b> {{entry.number_of_page}} </p>
+		<p> <b class ="bold"> Publisher : </b> {{entry.publisher.name}} </p>
+		<p> <b class ="bold"> Faculty : </b> {{entry.faculty.name}} </p>
+		<p> <b class ="bold"> Supervisor : </b> {{entry.supervisor}} </p>
+
+	<form action ="/cart" method ="POST" enctype ="application/x-www-form-urlencoded">
+			{{> csrf}}
+		<input type ="hidden" value ="{{entry._id}}" name ="item_id" required="required"/>
+		<input type ="hidden" value ="{{entry.title}}" name ="title" required="required"/>
+		<input type ="hidden" value ="1" name ="quantity" required="required"/>
+		<input type ="hidden" value ="{{entry.price}}" name ="unit_price" required="required"/>
+		<div class ="item-menu">
+{{{addToCartButtonSingle entry._id}}}
+		</div>
+	</form>
+
+
+		<div class ="clear"></div>
+
+	</div>
+	
+		<div id ="main-content">
+		<p> {{{entry.content}}} </p>
+	</div>
+
+	</div>
+
+	<div class ="clear"></div>
+
+	<div id ="item-options"> 
+
+	<a href ="/thesis/detail/{{entry.slug}}/{{entry._id}}/comment" class ="form-btn-submit btn-blue"> View Discussion </a>
+
+	<a href ="/thesis/detail/{{entry.slug}}/add-comment" class ="form-btn-submit btn-blue"> Add a Comment </a>
+
+	</div>
+
+	<div class ="clear"></div>
+
+	{{/if}}
+
+{{> no-entry-update-delete}}
+
+	{{#whenAlg relatedEntries.length ">" 0}}
+
+	<div class ="related-entries">
+
+		<h3> Related Entries </h3>
+
+	<div class ="items">
+
+		{{#each relatedEntries}}
+
+			<div class ="item">
+
+				<h3 title ="{{title}}"> <a class ="" href ="/thesis/detail/{{slug}}"> <span class ="fa fa-link"></span> {{title}} </a> </h3>
+
+				<div class ="item-bio">
+
+				<p class="item-sub-item"> <b class ="bold"> Department : </b> {{department.name}} </p>
+				<p> <b class ="bold"> Publication Year : </b> {{publication_year}} </p>
+				<p  class="item-sub-item"> <b class ="bold"> Author : </b> {{author_name}} </p>
+				<p> <b class ="bold"> Price : </b> {{price}} </p>
+
+			</div>
+
+				<p> 
+
+					<form action ="/cart" method ="POST" enctype ="application/x-www-form-urlencoded">
+
+						{{> csrf}}
+						<input type ="hidden" value ="{{_id}}" name ="item_id" required="required"/>
+						<input type ="hidden" value ="{{title}}" name ="title" required="required"/>
+						<input type ="hidden" value ="1" name ="quantity" required="required"/>
+						<input type ="hidden" value ="{{price}}" name ="unit_price" required="required"/>
+						<div class ="item-menu">
+						<button type ="submit" class ="btn-add-to-cart btn-blue" > <span class ="fa fa-book"></span> Add to Wishlist </button> 
+					</div>
+					</form>
+				
+			</p>
+
+			</div>
+
+		{{/each}}
+
+		</div>
+
+
+	</div>
+
+	{{/whenAlg}}
+
+
+		</div>
+
+		

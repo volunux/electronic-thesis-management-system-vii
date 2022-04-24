@@ -1,0 +1,9 @@
+			<label for ="contact_address" class ="form-label"> Contact Address : </label>
+
+			<textarea id ="contact_address" name ="contact_address" class ="form-control checkout-address-field" required="required" {{#if toDelete}} readonly="readonly" {{/if}}> {{entry.contact_address}} </textarea>
+
+			{{#if errorObjectList.contact_address}}
+
+			<p class ="bold validation-error"> {{errorObjectList.contact_address.message}} </p>
+
+			{{/if}}

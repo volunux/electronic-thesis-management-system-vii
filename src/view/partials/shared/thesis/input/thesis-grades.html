@@ -1,0 +1,14 @@
+
+			<label for ="grade" class ="form-label"> Thesis Grade : * </label>
+
+			<select id ="grade" name ="grade" class ="form-control" required="required" {{#if toDelete}} readonly="readonly" {{/if}}>
+
+				<option value =""> </option>
+
+			{{#each thesisGrades}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.grade_id}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>

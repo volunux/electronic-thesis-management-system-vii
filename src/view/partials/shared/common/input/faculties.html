@@ -1,0 +1,14 @@
+
+			<label for ="faculty" class ="form-label"> Faculty : * </label>
+
+			<select id ="faculty" name ="faculty" class ="form-control" required="required" {{#if toDelete}} readonly="readonly" {{/if}}>
+
+				<option value =""> </option>
+
+			{{#each faculties}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.faculty_id}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>

@@ -1,0 +1,14 @@
+
+			<label for ="status" class ="form-label"> Status : * </label>
+
+			<select id ="status" name ="status" class ="form-control">
+
+				<option value =""> </option>
+
+			{{#each statuses}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.status_id}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>

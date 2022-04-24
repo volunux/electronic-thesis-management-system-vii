@@ -1,0 +1,44 @@
+#dashboard ul {
+
+	list-style-type : none;
+	width : 95%;
+	padding : 10px 5px 5px 5px;
+	margin : 20px auto 0px;
+}
+
+#dashboard li {
+
+	display : inline-block;
+	width : 43%;
+	height : 60px;
+	margin : 10px 0px 10px 30px;
+}
+
+#dashboard a {
+
+	font-size : 11px;
+	display : block;
+	border : 2px solid lightblue;
+	background-color : #1d73c5;
+	width : 100%;
+	background-image : url("../images/circle.png");
+	background-repeat : no-repeat;
+	background-position: 2% 80%;
+	background-size : 6px; 
+	height : 100%;
+	line-height : 40px;
+	font-family : 'RobotoLight';
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align : center;
+	padding : 10px 5px;
+	border-radius : 6px;
+	cursor : pointer;
+	color : white;
+}
+
+#dashboard a:hover {
+
+	background-color : #3099fd;
+}

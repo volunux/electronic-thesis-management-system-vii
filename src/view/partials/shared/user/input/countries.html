@@ -1,0 +1,14 @@
+
+			<label for ="country" class ="form-label"> Country : * </label>
+
+			<select id ="country" name ="country" class ="form-control" required="required" {{#if toDelete}} readonly="readonly" {{/if}}>
+
+				<option value =""> </option>
+
+			{{#each countries}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.country_id}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>

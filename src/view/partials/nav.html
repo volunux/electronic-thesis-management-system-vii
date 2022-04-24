@@ -1,0 +1,30 @@
+
+			<ul>
+
+				<li> <a href ="/"> <span class ="fa fa-home"></span> Home </a> </li>
+
+				<li> <a href ="/cart"> <span class ="fa fa-shopping-cart"></span> Cart </a> </li>
+
+				<li> <a href ="/thesis/user"> <span class ="fa fa-book"></span> Thesis </a> </li>
+
+	{{#if isUserLoggedIn}}
+
+				<li> <a href ="/dashboard"> <span class ="fa fa-dashboard"></span> Dashboard </a> </li>
+
+				<li> <a href ="/sign-out"> <span class ="fa fa-sign-out"></span> Sign out </a> </li>
+
+	{{/if}}
+
+	{{#unless isUserLoggedIn}}
+
+				<li> <a href ="/sign-in"> <span class ="fa fa-sign-in"></span> Sign in </a> </li>
+
+				<li> <a href ="/sign-up"> <span class ="fa fa-plus"></span> Sign up </a> </li>
+
+	{{/unless}}
+
+				<li> <a href ="/more"> <span class ="fa fa-question-circle"></span> More </a> </li>
+
+  			<li> <a href="javascript:void(0);" id="menu-icon"> <span class="fa fa-bars"></span> </a> </li>
+
+			</ul>

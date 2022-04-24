@@ -1,0 +1,82 @@
+{{#if entry}}
+
+	<h2 class ="bold"> {{title}} </h2>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail'>
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			<tr>
+
+				<th>Text : </th>
+				<td> {{entry.text}} </td>
+
+			</tr>
+
+			{{#if entry.comment}}
+
+			<tr>
+
+				<th>Comment Text : </th>
+				<td> {{entryValid entry.comment.text}} </td>
+
+			</tr>
+
+			{{#if entry.comment.thesis_title}}
+			<tr>
+
+				<th> Thesis Title : </th>
+				<td> {{entryValid entry.comment.thesis_title}} </td>
+
+			</tr>
+			{{/if}}
+
+			{{/if}}
+
+			{{#if entry.thesis_title}}	
+			<tr>
+
+				<th>Thesis Title : </th>
+				<td> {{entryValid entry.thesis_title}} </td>
+
+			</tr>
+			{{/if}}
+
+			{{#if entry.author_name}}
+			<tr>
+
+				<th> Author Name : </th>
+				<td> {{entryValid entry.author_name}} </td>
+
+			</tr>
+			{{/if}}
+
+			<tr>
+
+				<th> Created On : </th>
+				<td> {{mDate entry.created_on}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Updated On : </th>
+				<td> {{mDate entry.updated_on}} </td>
+
+			</tr>
+
+		</tbody>
+	</table>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-detail}}

@@ -1,0 +1,126 @@
+
+
+	<div id ="entry-update">
+
+	<form action="./checkout" method ="POST">
+
+		{{> csrf}}
+
+	<div class ="" id ="checkout-form">
+
+	<h2> Checkout </h2>
+
+		<div id ="personal-data">
+
+		<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/cart/input/full-name }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/cart/input/phone-number }} </fieldset>
+
+		</div>
+
+
+		<div class ="form-group-parent">
+
+		{{#whenAlg countries.length ">" 0}} <fieldset class ="form-group wide"> {{> shared/cart/input/countries }} </fieldset> {{/whenAlg}}
+
+	</div>
+
+
+		<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/cart/input/state }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/cart/input/city }} </fieldset>
+
+		</div>
+
+	</div>
+
+
+<div id ="address-data">
+
+		<div class ="clearboth"></div>
+
+		<div class ="form-group-parent">
+
+	 	<fieldset class ="form-group wide"> {{> shared/cart/input/contact-address }} </fieldset>
+
+	</div>
+
+
+		<div class ="form-group-parent">
+
+		<fieldset class ="form-group wide"> {{> shared/cart/input/zip }} </fieldset>
+
+		</div>
+
+		<div class ="form-group-parent">
+
+		{{#whenAlg paymentMethods.length ">" 0}} <fieldset class ="form-group"> {{> shared/cart/input/payment-methods }} </fieldset> {{/whenAlg}}
+
+		{{#whenAlg deliveryMethods.length ">" 0}} <fieldset class ="form-group"> {{> shared/cart/input/delivery-methods }} </fieldset> {{/whenAlg}}
+
+		</div>
+
+</div>
+
+
+
+	<div id ="checkout-summary">
+
+	<h3 class ="bold"> Summary </h3>
+
+<div id ="table-curves">
+
+	<table id ='entry-detail'>
+
+		<colgroup>
+			<col class ='parameter'/>
+			<col class ='prop-data'/>
+		</colgroup>
+
+		<tbody>
+
+			<tr>
+
+				<th>Total Number of Items </th>
+				<td> {{total_item}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th class ="bold"> Total Quantity of Items </th>
+				<td class ="bold"> {{total_quantity}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Total Price Amount of Items : </th>
+				<td class ="bold"> {{total_amount}} </td>
+
+			</tr>
+
+
+		</tbody>
+	</table>
+
+</div>
+
+</div>
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Confirm Order </button>
+
+		</div>
+
+		</div>
+
+			<div class ="clear"></div>
+
+	</form>
+
+</div>

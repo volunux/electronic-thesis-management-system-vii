@@ -1,0 +1,137 @@
+@import "./font.css";
+@import "./base.css";
+@import "./timeline.css";
+@import "./header-nav.css";
+@import "./btn.css";
+@import "./search.css";
+@import "./entries.css";
+@import "./commons.css";
+@import "./checkbox.css";
+@import "./item-detail.css";
+@import "./form.css";
+@import "./options.css";
+@import "./dashboard.css";
+@import url('./responsive/common-490px.css') screen and (max-width : 490px);
+@import url('./responsive/form-580px.css') screen and (min-width : 660px) and (max-width : 1040px);
+@import url('./responsive/form-580px.css') screen and (max-width : 580px);
+@import url('./responsive/nav-600px.css') screen and (max-width : 600px);
+@import url('./responsive/nav-680px.css') screen and (max-width : 680px);
+@import url('./responsive/nav-800px.css') screen and (max-width : 800px);
+@import url('./responsive/common-700px.css') screen and (max-width : 700px);
+@import url('./responsive/common-760px.css') screen and (max-width : 760px);
+
+.related-entries {
+
+	margin-top : 20px;
+}
+
+.related-entries h3 {
+
+	margin-bottom: 10px;
+}
+
+#item-options {
+
+	text-align : center;
+}
+
+#item-options a {
+
+	display : inline-block;
+	margin : 2px;
+	width : 45%;
+}
+
+#aremi-loading-bar {
+
+	display : none;
+	width : 100px;
+	height : 100px;
+	max-width: 200px;
+	max-height : 200px;	
+	background-image : url('../images/loading-bar-2.gif');
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin : auto auto;
+}
+
+@media screen and (max-width : 650px) {
+
+	.item-bio {
+
+		height : 100%;
+	}
+}
+
+
+
+@media screen and (min-width : 660px) and (max-width : 1040px)  {
+	
+.item {
+
+	width : 42%;
+	height : 230px;
+	padding : 1%;
+	margin : 0px 30px 10px 0px;
+	float : left;
+}
+
+}
+
+@media screen and (max-width : 680px) {
+
+	.item {
+
+		width : 100%;
+		height : 100%;
+		float : none;
+		margin : 0px 0px 5px 0px;
+	}
+
+	.item h3 {
+
+		font-size : 14px;
+	}
+
+	.item p {
+
+		font-size : 13.5px;
+	}
+
+	#dashboard a {
+
+		font-size : 13px;
+	}
+	
+}
+
+@media screen and (max-width : 760px) {
+
+#item-profile {
+
+	float : none;
+	width : 100%;
+	border : none;
+	border-bottom : 2px solid #75ced7;
+	margin : 0px 0px 20px 0px;
+	background: none;
+	background-color : white;
+	color : black;
+}
+
+#item-body {
+
+	margin-right : 0px;
+}
+
+.items {
+
+	margin-top : 10px;
+}
+
+	#dashboard a {
+
+		font-size : 13px;
+	}
+
+}

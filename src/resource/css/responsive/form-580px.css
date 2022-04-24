@@ -1,0 +1,17 @@
+fieldset .form-label {
+
+	margin-bottom : 5px;
+}
+
+fieldset.form-group {
+
+	margin-bottom : 5px;
+	width : 100%;
+	float : none;
+	margin-right : 0;
+}
+
+fieldset.wide {
+
+	width : 100%;
+} 

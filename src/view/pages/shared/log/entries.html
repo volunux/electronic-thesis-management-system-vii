@@ -1,0 +1,67 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+	<div class ="entries-options">
+
+	</div>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<table id ="entries" class ="entries">
+
+	<div class ="clear"></div>
+
+		<colgroup>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th class ="center">Index</th>
+				<th class ="left">Name</th>
+				<th class ="center">Last Modified Date</th>
+				<th class ="center">Status Last Modified Date</th>
+				<th class ="center">Size</th>
+				<th class ="center">Changes</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each entries}}
+
+			
+			<tr>
+				<td class ="center">{{indexIncr @index}}</td>
+				<td title ="{{file_name}}"><a href ="/{{urlResolver '../detail'}}/{{_id}}">{{file_name}}</a></td>
+				<td class ="center">{{mDate updated_on}} </td>
+				<td class ="center">{{mDate status_last_modified_date}} </td>
+				<td class ="center">{{size}} </td>
+					<td class ="tr-changes-menu center">
+						<a href ="/internal/admin/log/detail/{{file_name}}" class ="btn-navy"> <span class ="fa fa-eye"></span> Read</a>
+						<a href ="/internal/admin/log/download/{{file_name}}" class ="btn-aqua"><span class ="fa fa-pencil"></span> Download</a>
+						<a href ="/internal/admin/log/delete/{{file_name}}" class ="btn-red"> <span class ="fa fa-trash"></span> Delete</a>
+
+					</td>
+			</tr>
+			
+
+			{{/each}}
+		</tbody>
+
+	</table>
+
+	{{/whenAlg}}
+
+		{{> no-entries}}
+
+	<div class ="entries-options">
+
+	</div>
+
+		<div class ="clear"></div>

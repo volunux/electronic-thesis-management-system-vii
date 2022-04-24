@@ -1,0 +1,9 @@
+			<label for ="full_name" class ="form-label"> Full Name : * </label>
+
+			<input id ="full_name" name ="full_name" value ="{{entry.full_name}}" class ="form-control" required="required"/>
+
+			{{#if errorObjectList.full_name}}
+
+			<p class ="bold validation-error"> {{errorObjectList.full_name.message}} </p>
+
+			{{/if}}

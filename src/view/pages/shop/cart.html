@@ -1,0 +1,93 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+	<div class ="entries-options">
+
+	</div>
+
+	{{#whenAlg entries.length '>' 0}}
+
+	<table id ="entries" class ="entries">
+
+	<div class ="clear"></div>
+
+		<colgroup>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+			<col/>
+		</colgroup>
+
+		<thead>
+			<tr>
+				<th>Index</th>
+				<th class ="left">Name</th>
+				<th class ="center">Product Id</th>
+				<th class ="center">Quantity</th>
+				<th class ="center">Unit Price</th>
+				<th class ="center">Amount</th>
+				<th></th>
+			</tr>
+		</thead>
+
+		<tbody>
+			{{#each entries}}
+
+			
+			<tr>
+					<form action ="/cart/update" method ="POST" enctype="application/x-www-form-urlencoded">
+
+				<td class ="center">{{indexIncr @index}}</td>
+				<td title ="{{title}}"><a class ="" href ="/thesis/detail/{{slug}}"> {{entryValid title}} </a> </td>
+				<td class ="center">{{entryValid item_id}}</td>
+
+				{{> csrf}}
+
+				<td class ="center"><input class ="cart-item-quantity center" type ="text" class ="center quantity-update" name ="quantity" value ="{{quantity}}" required="required"/></td>
+				<td class ="center">{{entryValid unit_price}}</td>
+				<td class ="center">N {{entryValid amount}}</td>
+				<td class ="cart-update center">
+						<input type ="hidden" name ="item_id" value ="{{item_id}}" required="required"/>
+						<button type ="submit" class ="btn-navy"> <span class ="fa fa-pencil"></span> Update </button>
+						<a href ="cart/delete/{{item_id}}" class="btn-red"> <span class ="fa fa-trash"></span> Delete</a>
+				</td>
+			</tr>
+					</form>
+			
+
+			{{/each}}
+		</tbody>
+
+		<tfoot>
+
+			<tr>
+				<td colspan="7"><hr class ="line-separator"/></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class ="bold left" colspan ="1">Total Items : {{total_item}} </td>
+				<td class ="bold center" colspan ="2"> Quantity : {{total_quantity}} </td>
+				<td class ="bold center " colspan="2"> Price : {{total_amount}} </td>
+				<td class ="center"> <p> 
+						<a class ="form-btn btn-blue checkout-btn" href ="/cart/checkout"> <span class ="fa fa-shopping-cart"></span> Proceed to Checkout </a>
+					<form action ="/cart/clear/" method ="POST" enctype="application/x-www-form-urlencoded">
+						{{> csrf}}
+						<button class="form-btn btn-blue checkout-btn" href="/cart/clear"> <span class ="fa fa-trash"></span> Empty Cart </button> </form> </p> </td>
+
+				<td></td>
+
+			</tr>
+
+		</tfoot>
+
+	</table>
+
+	{{/whenAlg}}
+
+		{{> empty-cart}}
+
+		<div class ="clear"></div>

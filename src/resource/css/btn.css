@@ -1,0 +1,137 @@
+.btn-add-to-cart {
+
+	display : inline-block;
+	width : 120px;
+	margin : 0% 0% 1.3351134846461949265687583444593% 2.3351134846461949265687583444593%;
+	text-align : center;
+	padding : 5px;
+	font-size : 11px;
+	border-radius : 6px;
+	cursor : pointer;
+	color : white;
+	font-family: 'RobotoRegular';
+}
+
+.btn-blue {
+
+	background-color : #1d73c5;
+	border : 2px solid lightblue;
+}
+
+.btn-blue:hover {
+
+	background-color : #3099fd;
+}
+
+.btn-purple {
+
+  background-color: #572897;
+  border: 2px solid #c857ed;
+}
+
+.btn-purple:hover {
+
+   background-color: #8537ef;
+}
+
+.btn-green {
+   
+   background-color: #0e894a;
+   border: 2px solid #57eda8;
+}
+
+.btn-green:hover {
+
+   background-color: #1cc16c;
+}
+
+.btn-yellow {
+    background-color: #c3b42d;
+    border: 2px solid #ffec44;
+}
+
+.btn-yellow:hover {
+
+    background-color: #ddc809;
+}
+
+.btn-red {
+    background-color: #b53131;
+    border: 2px solid #fb4c4c;
+}
+
+.btn-red:hover {
+
+    background-color: #df0c0c;
+}
+
+.btn-aqua {
+    background-color: #3baba6;
+    border: 2px solid #3ccefd;
+}
+
+.btn-aqua:hover {
+
+    background-color: #1ed3cb;
+}
+
+.btn-orange {
+    background-color: #a3611d;
+    border: 2px solid #ff9e79;
+}
+
+.btn-orange:hover {
+
+    background-color: #df7b14;
+}
+
+.btn-pink {
+    background-color: #a92d57;
+    border: 2px solid #f1719d;
+}
+
+.btn-pink:hover {
+
+    background-color: #f5266c;
+}
+
+.btn-gray {
+    
+  background-color: #706b6b;
+  border: 2px solid #b89bc1;
+}
+
+.btn-gray:hover {
+    
+  background-color: #9b9797;
+}
+
+.btn-navy {
+
+  background-color: #4d6a78;
+  border: 2px solid #9abccd;
+}
+
+.btn-navy:hover {
+	
+  background-color: #7199ad;
+}
+
+.object-download-status {
+
+  display : inline;
+  visibility: hidden;
+}
+
+.forgot-password-btn {
+
+  display : inline-block;
+  width : 160px;
+  margin : 1.851134846461949265687583444593% 0% 1.3351134846461949265687583444593% 0%;
+  text-align : center;
+  padding : 3px;
+  font-size : 11px;
+  border-radius : 6px;
+  cursor : pointer;
+  color : white;
+}

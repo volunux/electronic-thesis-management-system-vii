@@ -1,0 +1,154 @@
+<h2 class ="bold"> Profile Detail </h2>
+
+<div id ='table-curves'>
+
+	<table id ="entry-detail">
+
+		<colgroup>
+			<col/>
+			<col/>
+		</colgroup>
+
+		<tbody>
+
+			{{#if entry.user_profile_photo}}
+
+			<tr>
+
+				<th>Profile Photo : </th>
+				<td> <img class ="passport" title ="{{entryValid entry.first_name}} {{entryValid entry.last_name}} Profile Photo" src ="{{entry.user_profile_photo.location}}"/> </td>
+
+			</tr>
+
+			{{/if}}
+
+
+			{{#if entry.user_signature}}
+
+			<tr>
+
+				<th>Signature : </th>
+				<td> <img class ="signature" title ="{{entryValid entry.first_name}} {{entryValid entry.last_name}} Signature" src ="{{entry.user_signature.location}}"/> </td>
+
+			</tr>
+
+			{{/if}}
+
+			<tr>
+
+				<th>First Name : </th>
+				<td> {{entryValid entry.first_name}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th>Last Name : </th>
+				<td> {{entryValid entry.last_name}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th>About : </th>
+				<td> {{entryValid entry.about}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th>Email Address : </th>
+				<td> {{entryValid entry.email_address}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th>Matriculation Number : </th>
+				<td> {{entryValid entry.matriculation_number}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th>Username : </th>
+				<td> {{entryValid entry.username}} </td>
+
+			</tr>
+
+
+			{{#if entry.department}}
+			<tr>
+
+				<th>Department : </th>
+				<td> {{entryValid entry.department.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.faculty}}
+			<tr>
+
+				<th>Faculty : </th>
+				<td> {{entryValid entry.faculty.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.level}}
+			<tr>
+
+				<th>Level : </th>
+				<td> {{entryValid entry.level.name}} </td>
+
+			</tr>
+			{{/if}}
+
+
+			{{#if entry.country}}
+			<tr>
+
+				<th>Country : </th>
+				<td> {{entryValid entry.country.name}} </td>
+
+			</tr>
+			{{/if}}
+
+			{{#if entry.roles}}
+			<tr>
+
+				<th>Role : </th>
+				<td> {{jsonArrayToString entry.roles "name"}} </td>
+
+			</tr>
+			{{/if}}
+
+			<tr>
+
+				<th> Created On : </th>
+				<td> {{mDate entry.created_on}} </td>
+
+			</tr>
+
+			<tr>
+
+				<th> Updated On : </th>
+				<td> {{mDate entry.updated_on}} </td>
+
+			</tr>
+
+			{{#if entry.status}}
+			<tr>
+
+				<th> Status : </th>
+				<td>{{entryValid entry.status.name}}</td>
+
+			</tr>
+			{{/if}}
+
+		</tbody>
+	</table>
+
+</div>

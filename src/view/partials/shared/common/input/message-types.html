@@ -1,0 +1,14 @@
+
+			<label for ="message_type" class ="form-label"> Message Type : * </label>
+
+			<select id ="message_type" name ="message_type" class ="form-control">
+
+				<option value =""> </option>
+
+			{{#each messageTypes}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.message_type}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>

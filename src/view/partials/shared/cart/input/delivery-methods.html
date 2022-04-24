@@ -1,0 +1,20 @@
+
+			<label for ="delivery_method" class ="form-label"> Delivery Method {{entry.delivery_method}} : * </label>
+
+			<select id ="delivery_method" name ="delivery_method" class ="form-control" required="required" >
+
+				<option value =""> </option>
+
+			{{#each deliveryMethods}}
+
+				<option value ="{{_id}}" {{#whenAlg _id "==" ../entry.delivery_method}} selected ="selected" {{/whenAlg}}> {{name}} </option>
+
+			{{/each}}
+
+			</select>
+
+			{{#if errorObjectList.delivery_method}}
+
+			<p class ="bold validation-error"> {{errorObjectList.delivery_method.message}} </p>
+
+			{{/if}}

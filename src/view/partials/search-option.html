@@ -1,0 +1,43 @@
+{{#whenAlg search_criteria.length '>' 0}}
+
+		<div id ="search-menu">
+
+			<form method ="GET">
+
+				<fieldset class ="form-control">
+					
+					<select name ="type" id ="search-type">
+
+							<option value =""> Search Type </option>
+
+							{{#each search_criteria}}
+
+								<option value ="{{this.name}}" {{#whenAlg name "==" ../inputType}} selected ="selected" {{/whenAlg}}>{{this.title}} </option>
+
+								{{/each}}
+
+					</select>
+
+					<div class ="inline-children">
+
+					<input type ="text" name ="search" id ="search-input" placeholder ="Search Input?......................................." value="{{searchInput}}" required="required"> 
+
+						<button id ="search-btn" type ="submit"> <span class ="fa fa-search"></span> Search </button>
+
+					<a id ="search-btn" href ="/{{urlResolver './'}}"> Reset </a>
+
+					</div>
+
+				</fieldset>
+
+			</form>
+
+			{{#if searchInput}}
+
+			<p> <b>Search Input : </b> {{searchInput}} </p>
+
+			{{/if}}
+
+		</div>
+
+{{/whenAlg}}

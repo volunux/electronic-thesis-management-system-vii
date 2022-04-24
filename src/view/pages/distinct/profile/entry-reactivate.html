@@ -1,0 +1,23 @@
+<h2 class ="bold"> {{title}} Profile Reactivate </h2>
+
+{{#whenAlg status "===" 'Deactivated'}}
+
+<p> Profile entry if the button is clicked or pressed will result in deactivation by the system. This means you will be unable to perform some actions or complete some tasks in the system. </p>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+
+		<button class ="form-btn-submit btn-green" type ="submit"> Confirm </button>
+
+	</form>
+
+{{/whenAlg}}
+
+{{#whenAlg status "!==" 'Deactivated'}}
+
+<p>The status of your account is <b> {{status}} </b> and as a result you cannot perform this action.</p>
+
+{{/whenAlg}}
+
+<div class ="clear"></div>

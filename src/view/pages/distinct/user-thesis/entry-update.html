@@ -1,0 +1,72 @@
+{{#if entry}}
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > Details Update : {{title}}  </h2>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+
+	{{> validation-errors}}
+
+	<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/title }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/price }} </fieldset>
+
+		</div>
+
+
+	<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/number-of-page }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/publication-year }} </fieldset>
+
+		</div>
+
+
+	<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/author-name }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/supervisor }} </fieldset>
+
+		</div>
+
+
+			<div class ="form-group-parent">
+
+				{{#whenAlg faculties.length ">" 0}} <fieldset class ="form-group"> {{> shared/common/input/faculties }} </fieldset> {{/whenAlg}}
+
+				<fieldset class ="form-group"> {{> shared/common/input/departments }} </fieldset>
+
+		</div>
+
+
+			<div class ="form-group-parent">
+
+		{{#whenAlg thesisGrades.length ">" 0}} <fieldset class ="form-group"> {{> shared/thesis/input/thesis-grades }} </fieldset> {{/whenAlg}}
+
+		{{#whenAlg publishers.length ">" 0}} <fieldset class ="form-group"> {{> shared/thesis/input/publishers }} </fieldset> {{/whenAlg}}
+
+		</div>
+
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

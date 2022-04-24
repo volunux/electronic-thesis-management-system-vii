@@ -1,0 +1,48 @@
+{{#if entry}}
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > {{title}}  </h2>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+
+	{{> validation-errors}}
+
+	<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/title }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/number-of-page }} </fieldset>
+
+		</div>
+
+
+	<div class ="form-group-parent">
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/author-name }} </fieldset>
+
+		<fieldset class ="form-group"> {{> shared/thesis/input/publication-year }} </fieldset>
+
+		</div>
+
+
+		<fieldset class ="form-group wide"> {{> shared/common/input/status }} </fieldset>
+
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-blue" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}

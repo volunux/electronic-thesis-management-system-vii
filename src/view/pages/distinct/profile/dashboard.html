@@ -1,0 +1,51 @@
+<h2 class ="bold"> {{title}} Profile </h2>
+
+	{{> flash}}
+
+<div id ="dashboard">
+
+	<ul>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './entries'}}" title ="{{title}} Entries"> <span class ="fa fa-list"></span> Entries </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './detail'}}" title ="{{title}} Detail"> <span class ="fa fa-eye"></span> Detail  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './update'}}" title ="{{title}} Update"> <span class ="fa fa-pencil"></span> Update  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './password-change'}}" title ="{{title}} Update"> <span class ="fa fa-key"></span> Password Change  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './deactivate'}}" title ="{{title}} Deactivate"> <span class ="fa fa-lock"></span> Deactivate  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './reactivate'}}" title ="{{title}} Reactivate"> <span class ="fa fa-unlock"></span> Reactivate  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './profile-photo'}}" title ="{{title}} Update Photo"> <span class ="fa fa-photo"></span> Update Photo  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './signature'}}" title ="{{title}} Update Signature"> <span class ="fa fa-photo"></span> Update Signature  </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './delete/profile-photo'}}" title ="{{title}} Delete Profile Photo"> <span class ="fa fa-trash"></span> Delete Profile Photo </a>
+		</li>
+
+		<li>
+				<a class ="center {{randomButtonColor}}" href ="/{{urlResolver './delete/signature'}}" title ="{{title}} Delete Signature"> <span class ="fa fa-trash"></span> Delete Signature </a>
+		</li>
+
+	</ul>
+
+	</div>

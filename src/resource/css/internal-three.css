@@ -1,0 +1,96 @@
+@import "./font.css";
+@import "./base.css";
+@import "./header-nav.css";
+@import "./btn.css";
+@import "./search.css";
+@import "./entries.css";
+@import "./commons.css";
+@import "./checkbox.css";
+@import "./item-detail.css";
+@import "./form.css";
+@import "./options.css";
+@import "./dashboard.css";
+@import url('./responsive/common-490px.css') screen and (max-width : 490px);
+@import url('./responsive/form-580px.css') screen and (min-width : 660px) and (max-width : 1040px);
+@import url('./responsive/form-580px.css') screen and (max-width : 580px);
+@import url('./responsive/nav-600px.css') screen and (max-width : 600px);
+@import url('./responsive/nav-680px.css') screen and (max-width : 680px);
+@import url('./responsive/nav-800px.css') screen and (max-width : 800px);
+@import url('./responsive/common-700px.css') screen and (max-width : 700px);
+@import url('./responsive/common-760px.css') screen and (max-width : 760px);
+
+col:nth-of-type(1) {
+
+	width : 7%;
+}
+
+col:nth-of-type(2) {
+
+	width : 35%;
+}
+
+col:nth-of-type(3) {
+
+	width : 12%;
+}
+
+col:nth-of-type(4) {
+
+	width : 15%;
+}
+
+col:nth-of-type(5) {
+
+	width : 30%;
+}
+
+
+@media screen and (max-width : 700px) {
+
+	table#entries tbody td:nth-child(1)::before {
+
+		content : 'Entry Index : ';
+	}
+
+	table#entries tbody td:nth-child(2)::before {
+
+		content : 'Name : ';
+	}
+
+	table#entries tbody td:nth-child(3)::before {
+
+		content : 'Created Date : ';
+	}
+
+	table#entries tbody td:nth-child(4)::before {
+
+		content : 'Update Date : ';
+	}
+
+	table#entries tbody td:nth-child(1) , table#entries tbody td:nth-child(2) , table#entries tbody td:nth-child(3) , table#entries tbody td:nth-child(4) , table#entries tbody td:nth-child(5) {
+
+		display : block;
+		text-align : left;
+	}
+
+	#dashboard a {
+
+		font-size : 13px;
+	}
+
+	.tr-changes-menu {
+
+		display : block;
+	}
+
+	.tr-changes-menu a , .tr-changes-menu button {
+
+		display : inline-block;
+	}
+
+	table#entries td , table#entries td::before , table#entry-detail td , table#entry-detail th , table#entry-detail li {
+
+		font-size : 13.5px;
+	}
+
+}

@@ -1,0 +1,33 @@
+{{#if entry}}
+
+	<div id ="entry-update">
+
+	<h2 class ="bold" > Entry Delete Request : {{title}} </h2>
+
+		<form method ="POST" enctype ="application/x-www-formurlencoded">
+
+				{{> csrf}}
+			<input type ="hidden" value ="{{entryId}}" name ="thesis" required="required"/>
+
+	{{> validation-errors}}
+
+	<p> You are about to make a request and submission that the thesis with the title <b> {{entry.title}} </b> be deleted, if you want this request fulfilled. Kindly give reasons why you will want this work or entry be deleted from the system </p>
+
+		<fieldset class ="form-group wide"> {{> shared/thesis/input/thesis-delete-message }} </fieldset>
+
+			<div class ="clear"></div>
+
+		<div class ="form-group">
+
+			<button type ="submit" class ="form-btn-submit btn-red" > Submit </button>
+
+		</div>
+
+	</form>
+
+</div>
+
+{{/if}}
+
+{{> no-entry-update-delete}}
+

@@ -1,0 +1,27 @@
+<h2 class ="bold"> {{title}} </h2>
+
+	{{> flash}}
+
+<div id ="dashboard">
+
+	<ul>
+
+		<li>
+				<a class ="center" href ="/{{urlResolver './entries'}}" title ="{{title}} Entries"> <span class ="fa fa-list"></span> {{title}} Entries </a>
+		</li>
+
+		<li>
+				<a class ="center" href ="/order/user" title ="Order"> <span class ="fa fa-shopping-cart"></span> Order </a>
+		</li>
+
+		<li>
+				<a class ="center" href ="/thesis/user" title ="Thesis"> <span class ="fa fa-book"></span> Thesis </a>
+		</li>
+
+		<li>
+				<a class ="center" href ="/profile" title ="Profile"> <span class ="fa fa-user"></span> Profile </a>
+		</li>
+
+	</ul>
+
+	</div>

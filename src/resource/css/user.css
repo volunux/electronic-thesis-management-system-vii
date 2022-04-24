@@ -1,0 +1,133 @@
+@import "./font.css";
+@import "./base.css";
+@import "./header-nav.css";
+@import "./btn.css";
+@import "./search.css";
+@import "./entries.css";
+@import "./commons.css";
+@import "./checkbox.css";
+@import "./item-detail.css";
+@import "./form.css";
+@import "./options.css";
+@import "./dashboard.css";
+@import url('./responsive/common-490px.css') screen and (max-width : 490px);
+@import url('./responsive/form-580px.css') screen and (min-width : 660px) and (max-width : 1040px);
+@import url('./responsive/form-580px.css') screen and (max-width : 580px);
+@import url('./responsive/nav-600px.css') screen and (max-width : 600px);
+@import url('./responsive/nav-680px.css') screen and (max-width : 680px);
+@import url('./responsive/nav-800px.css') screen and (max-width : 800px);
+@import url('./responsive/common-700px.css') screen and (max-width : 700px);
+@import url('./responsive/common-760px.css') screen and (max-width : 760px);
+
+
+col:nth-of-type(1) {
+
+	width : 4%;
+}
+
+col:nth-of-type(2) {
+
+	width : 12.5%;
+}
+
+col:nth-of-type(3) {
+
+	width : 12.5%;
+}
+
+col:nth-of-type(4) {
+
+	width : 7.2%;
+}
+
+col:nth-of-type(5) {
+
+	width : 7.2%;
+}
+
+col:nth-of-type(6) {
+
+	width : 7%;
+}
+
+col:nth-of-type(7) {
+
+	width : 11%;
+}
+
+col:nth-of-type(8) {
+
+	width : 7%;
+}
+
+col:nth-of-type(9) {
+
+	width : 31.1%;
+}
+
+
+@media screen and (max-width : 700px) {
+
+	table#entries tbody td:nth-child(1)::before {
+
+		content : 'Entry Index : ';
+	}
+
+	table#entries tbody td:nth-child(2)::before {
+
+		content : 'Full Name : ';
+	}
+
+	table#entries tbody td:nth-child(3)::before {
+
+		content : 'Email Address : ';
+	}
+
+	table#entries tbody td:nth-child(4)::before {
+
+		content : 'Department : ';
+	}
+
+	table#entries tbody td:nth-child(6)::before {
+
+		content : 'Level : ';
+	}
+
+	table#entries tbody td:nth-child(7)::before {
+
+		content : 'Updated On : ';
+	}
+
+	table#entries tbody td:nth-child(8)::before {
+
+		content : 'Status : ';
+	}
+
+	table#entries tbody td:nth-child(1) , table#entries tbody td:nth-child(2) , table#entries tbody td:nth-child(3) , table#entries tbody td:nth-child(4) , table#entries tbody td:nth-child(6) , 
+
+	table#entries tbody td:nth-child(7) , table#entries tbody td:nth-child(8) , table#entries tbody td:nth-child(9) {
+
+		display : block;
+		text-align : left;
+	}
+
+	#dashboard a {
+
+		font-size : 13px;
+	}
+
+	.tr-changes-menu {
+
+		display : block;
+	}
+
+	.tr-changes-menu a , .tr-changes-menu button {
+
+		display : inline-block;
+	}
+
+	table#entries td , table#entries td::before , table#entry-detail td , table#entry-detail th , table#entry-detail li {
+
+		font-size : 13.5px;
+	}
+}

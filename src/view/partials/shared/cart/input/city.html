@@ -1,0 +1,9 @@
+			<label for ="city" class ="form-label"> City : * </label>
+
+			<input id ="city" name ="city" value ="{{entry.city}}" class ="form-control" required="required"/>
+
+			{{#if errorObjectList.city}}
+
+			<p class ="bold validation-error"> {{errorObjectList.city.message}} </p>
+
+			{{/if}}

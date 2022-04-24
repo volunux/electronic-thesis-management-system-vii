@@ -1,0 +1,17 @@
+<h2 class ="bold"> {{title}} </h2>
+
+<div id ="dashboard">
+
+	<ul>
+
+	{{#each entries}}
+		<li>
+				<a class ="center" href ="/{{urlResolver '../'}}{{url}}"> {{title}}  </a>
+
+			</li>
+
+	{{/each}}
+
+	</ul>
+
+	</div>
