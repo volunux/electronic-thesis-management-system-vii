@@ -2,7 +2,7 @@
 # electronic-thesis-management-system-vii
 A web application that allows storage and sharing of undergraduate and graduate thesis projects
 
-**Note: This app is deployed on Google App Engine and would take 1-20 seconds to start due to idleness configuration for 10min if no activity, before 20 seconds elapse you will experience 502 Gateway Nginx.**
+**Note: This app is deployed on Google App Engine and would take 1-15 seconds to start due to hibernation and idleness for 10min if no activity, before 15 seconds you will experience 502 Gateway Nginx.**
 
 You can visit https://aremi-thesis.ey.r.appspot.com/ to get started
 
